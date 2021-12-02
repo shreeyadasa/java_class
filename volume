@@ -1,0 +1,48 @@
+import java.util.*;
+class SimpInt{
+double P,T,R;
+double SI()
+{
+return (P*T*R)/100;
+}
+}
+class areacircle
+{
+double R;
+double ar()
+{
+return R*R*3.14;
+}}
+class volume
+{
+double R1,L;
+double vol()
+{
+return 3.14*R1*R1*L;
+}}
+class Operation
+{
+public static void main(String args[])
+{
+SimpInt s1=new SimpInt();
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the values of principle, time and rate");
+s1.P=sc.nextDouble();
+s1.T=sc.nextDouble();
+s1.R=sc.nextDouble();
+System.out.println("The simple interest is:"+s1.SI());
+
+areacircle s2=new areacircle();
+//Scanner sc=new Scanner(System.in);
+System.out.println("Enter the radius of circle");
+s2.R=sc.nextDouble();
+System.out.println("The area of the circle is "+s2.ar());
+
+volume s3=new volume();
+//Scanner sc=new Scanner(System.in);
+System.out.println("Enter the radius and length of cylinder");
+s3.R1=sc.nextDouble();
+s3.L=sc.nextDouble();
+System.out.println("The volume of the cylinder is"+s3.vol());
+}
+}
