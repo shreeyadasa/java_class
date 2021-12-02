@@ -1,0 +1,43 @@
+//area of trangle and rectangle using dynamic method dispatch
+class area1{
+int a,b;
+area1(int x, int y)
+{
+a=x;
+b=y;
+}
+double area(){
+System.out.println("Area's not defined");
+return 0;
+}}
+class rectangle extends area1{
+rectangle(int x, int y){
+super(x, y);
+}
+double area(){
+double c1;
+c1=a*b;
+return c1;
+}}
+class triangle extends area1{
+triangle( int x, int y){
+super(x, y);
+}
+double area(){
+double t1;
+t1=0.5*a*b;
+return t1;
+}}
+class DynamicArea{
+public static void main(String args[]){
+area1 a1=new area1(0,0);
+rectangle R1= new rectangle(15,30);
+triangle T1= new triangle(20,30);
+area1 r;
+r=a1;
+System.out.println(r.area());
+r=R1;
+System.out.println("area of rectangle"+""+r.area());
+r=T1;
+System.out.println("area of Triangle"+""+r.area());
+}}
