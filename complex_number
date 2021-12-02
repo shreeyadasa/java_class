@@ -1,0 +1,44 @@
+import java.util.*;
+class complex
+{
+int real, imaginary;
+complex()
+{
+}
+complex(int tempReal, int tempImaginary)
+{
+real=tempReal;
+imaginary=tempImaginary;
+}
+complex addComp(complex c1, complex c2)
+{
+complex temp= new complex();
+temp.real= c1.real+c2.real;
+temp.imaginary=c1.imaginary+c2.imaginary;
+return temp;
+}
+complex subtractComp(complex c1, complex c2)
+{
+complex temp= new complex();
+temp.real=c1.real-c2.real;
+temp.imaginary=c1.imaginary-c2.imaginary;
+return temp;
+}
+void printComplexNumber()
+{
+System.out.println("complex number:"+real+"+"+imaginary+"i");
+}}
+public class complex_number{
+public static void main(String args[]){
+complex c1= new complex(3,2);
+c1.printComplexNumber();
+complex c2= new complex(9,5);
+c2.printComplexNumber();
+complex c3=new complex();
+c3=c3.addComp(c1,c2);
+System.out.println("Sum of");
+c3.printComplexNumber();
+c3=c3.subtractComp(c1,c2);
+System.out.println("difference of");
+c3.printComplexNumber();
+}}
