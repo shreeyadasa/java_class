@@ -1,0 +1,11 @@
+package CIE;
+
+public class Student
+{
+
+    public String USN;
+    public String name;
+    public int semester;
+
+}
+© 2022 GitHu
